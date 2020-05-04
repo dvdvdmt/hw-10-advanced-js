@@ -1,5 +1,11 @@
+import {allKeysAndSymbols} from "./all-keys-and-symbols.js";
+
 describe(`allKeysAndSymbols`, () => {
-  it(`pass all of the tests`, () => {
-    expect(2 + 2).toBe(4);
+  it(`returns empty array on falsy input`, () => {
+    expect(allKeysAndSymbols(null)).toHaveLength(0);
+  });
+
+  it(`returns empty array on object with empty prototype`, () => {
+    expect(allKeysAndSymbols(Object.create(null))).toHaveLength(0);
   });
 });
