@@ -4,12 +4,16 @@
   "description": "SHRI 2020. Homework 10. Advanced JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.5.4"
   }
 }
