@@ -1,0 +1,15 @@
+{
+  "name": "hw-10-advanced-js",
+  "version": "1.0.0",
+  "description": "SHRI 2020. Homework 10. Advanced JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.0.5"
+  }
+}
