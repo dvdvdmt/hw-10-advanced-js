@@ -6,6 +6,11 @@
   "scripts": {
     "test": "jest"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,6 +18,7 @@
     "prettier": "^2.0.5"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
     "@types/jest": "^25.2.1",
     "jest": "^25.5.4"
   }
