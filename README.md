@@ -1,3 +1,11 @@
+# Результат
+
+Работа выполнена с использованием Node **v12.16.3**.  
+Для запуска модульных тестов нужно установить зависимости `npm i` и выполнить
+`npm test`.
+
+# Описание
+
 ## allKeysAndSymbols
 
 Написать функцию, которая принимает объект и возвращает все свойства и символы
@@ -17,28 +25,28 @@ allKeysAndSymbols({}); // ["constructor", "__defineGetter__", "__defineSetter__"
 случает, когда свойство находится в самом объекте, но не в его прототипе.
 
 ```javascript
-const proto = { value: 42 };
+const proto = {value: 42};
 const object = Object.create(proto);
 
-Object.defineProperty(object, "year", {
+Object.defineProperty(object, 'year', {
   value: 2020,
   writable: true,
   configurable: true,
   enumerable: false,
 });
 
-const symbol = Symbol("bazzinga");
+const symbol = Symbol('bazzinga');
 object[symbol] = 42;
 
 // без proxy
-console.log("value" in object); // true
-console.log("year" in object); // true
+console.log('value' in object); // true
+console.log('year' in object); // true
 console.log(symbol in object); // true
 
 const proxy = // реализация
   // с proxy
-  console.log("value" in proxy); // false
-console.log("year" in proxy); // true
+  console.log('value' in proxy); // false
+console.log('year' in proxy); // true
 console.log(symbol in proxy); // true
 ```
 
@@ -67,19 +75,19 @@ function getId() {
 function getDataById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      id === ID ? resolve("🍎") : reject("💥");
+      id === ID ? resolve('🍎') : reject('💥');
     }, delayMS);
   });
 }
 
 asyncExecutor(function* () {
-  console.time("Time");
+  console.time('Time');
 
   const id = yield getId();
   const data = yield getDataById(id);
-  console.log("Data", data);
+  console.log('Data', data);
 
-  console.timeEnd("Time");
+  console.timeEnd('Time');
 });
 ```
 
