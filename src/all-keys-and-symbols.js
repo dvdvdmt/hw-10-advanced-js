@@ -1,14 +1,14 @@
 export function allKeysAndSymbols(object) {
-  const res = [];
+  const result = [];
   if (!object) {
-    return res;
+    return result;
   }
   const propertyNames = Object.getOwnPropertyNames(object);
   const symbolNames = Object.getOwnPropertySymbols(object).map(String);
-  res.push(
+  result.push(
     ...propertyNames,
     ...symbolNames,
     ...allKeysAndSymbols(Object.getPrototypeOf(object))
   );
-  return res;
+  return result;
 }
